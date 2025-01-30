@@ -90,7 +90,7 @@ try:
     choice = input("Enter your choice: ")
     if not choice.strip():
         raise ValueError
-except ValueError:
+except (ValueError, EOFError):
     print("Invalid input, defaulting to exit.")
     choice = '7'
 
