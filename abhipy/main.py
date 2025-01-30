@@ -1,7 +1,3 @@
-print("this is a pyyhton program")
-print("this is change 1")
-
-
 import sqlite3
 import pandas as pd
 
@@ -125,8 +121,12 @@ while True:
     print("6. Get all Transactions")
     print("7. Exit")
 
-    # choice = input("Enter your choice: ")
-    choice=7
+    try:
+      choice = input("Enter your choice: ")
+    except:
+      print("No input. Please enter a number.")
+      choice='7'
+      continue
 
     if choice == '1':
         acc_num = input("Enter Account Number: ")
@@ -158,4 +158,3 @@ while True:
         break
     else:
         print("Invalid choice! Please enter a valid option.")
-
